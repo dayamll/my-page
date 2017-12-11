@@ -5,19 +5,74 @@
   box-sizing: border-box;
 }
 
-ul li {
-  display: inline-block;
+.menu_bar {
+  display: none;
+}
+
+header nav {
+  background-color: rgb(80, 35, 80);
+  z-index: 1000;
+  max-width: 1000px;
+  width: 95%;
+  text-align: right;
+  margin: 2% 0% 2% 0%;
+}
+
+header nav ul {
   list-style: none;
-  margin-right: 10px;
-  float: right;
 }
 
-ul a {
+header nav ul li {
+  display: inline-block;
+  position: relative;
+}
+
+header nav ul li:hover {
+  background: #E6344A;
+}
+
+header nav ul li a {
+  color: #fff;
+  display: block;
   text-decoration: none;
+  padding: 15px;
 }
 
-.space1 {
-  padding: 2% 4%;
+header {
+  background-color: rgb(80, 35, 80);
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    padding-top: 0px;
+  }
+  .menu_bar {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #E6344A;
+  }
+  .menu_bar .bt-menu {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    overflow: hidden;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .menu_bar span {
+    float: right;
+    font-size: 40px;
+  }
+  header nav ul li a {
+    display: block;
+  }
+  header nav ul li .caret {
+    float: right;
+  }
 }
 
 h1 {
@@ -27,16 +82,6 @@ h1 {
   top: 30%;
   color: #fff;
 }
-
-nav a {
-  color: #fff;
-  text-align: right;
-}
-
-header {
-  background-color: rgb(80, 35, 80);
-}
-
 .header {
   background-image: url(../assets/images/edificios.gif);
   background-size: auto;
